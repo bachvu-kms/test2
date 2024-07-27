@@ -24,7 +24,7 @@ describe('example to-do app', () => {
     // We use the `cy.get()` command to get all elements that match the selector.
     // Then, we use `should` to assert that there are two matched items,
     // which are the two default items.
-    cy.get('.todo-list li').should('have.length', 2)
+    cy.get('.todo-list li').should('have.length', 250)
 
     // We can go even further and check that the default todos each contain
     // the correct text. We use the `first` and `last` functions
@@ -44,7 +44,7 @@ describe('example to-do app', () => {
     // This input has a data-test attribute so we'll use that to select the
     // element in accordance with best practices:
     // https://on.cypress.io/selecting-elements
-    cy.get('[data-test=new-todo]').type(`${newItem}{enter}`)
+    cy.get('[data-test=new-todo]1').type(`${newItem}{enter}`)
 
     // Now that we've typed our new item, let's check that it actually was added to the list.
     // Since it's the newest item, it should exist as the last element in the list.
